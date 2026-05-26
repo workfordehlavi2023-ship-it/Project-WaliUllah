@@ -668,6 +668,42 @@ footer {
   .join-inner { grid-template-columns: 1fr; }
   .join-cta-box { position: static; }
 }
+/* BUDDING PERIOD */
+#budding-period {
+  padding: 7rem 2rem;
+  background: var(--parchment);
+  text-align: center;
+}
+.budding-books {
+  max-width: 700px; margin: 3rem auto 0;
+  display: flex; flex-direction: column; gap: 0;
+}
+.budding-book {
+  display: flex; align-items: center; gap: 2rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  transition: background 0.3s;
+}
+.budding-book:first-child { border-top: 1px solid var(--border); }
+.budding-book:hover { background: rgba(184,145,42,0.04); }
+.budding-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem; font-weight: 600;
+  color: var(--gold-pale);
+  line-height: 1; flex-shrink: 0; width: 3rem;
+}
+.budding-title {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 500;
+  color: var(--ink); letter-spacing: 0.03em;
+  margin-bottom: 0.25rem;
+}
+.budding-author {
+  font-family: var(--font-read);
+  font-size: 0.9rem; font-style: italic;
+  color: var(--ink-muted);
+}
 
 /* FOUNDER PHOTO */
 .founder-photo-wrap {
@@ -709,6 +745,7 @@ footer {
     <li><a href="#about">About</a></li>
     <li><a href="#fees">Fees</a></li>
     <li><a href="#join">Join</a></li>
+    <li><a href="#budding-period">Reading Path</a></li>
   </ul>
    <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
   <a href="#" onclick="handleJoinAccess(); return false;" class="nav-cta">Join Now</a>
@@ -788,6 +825,51 @@ footer {
       we aim to prepare Muslim youth to face the challenges of westernization with clarity, confidence, and faith. Inspired by the intellectual legacy of Shah Wali Ullah Dehlavi, we aspire to cultivate minds capable of reviving and shaping an authentic Islamic worldview and social order for the future.
     </p>
     <span class="gold-rule wide"></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     BUDDING PERIOD
+     ============================================================ -->
+<section id="budding-period">
+  <p class="section-label">The Foundation</p>
+  <h2 class="section-title">The Budding Period</h2>
+  <p class="section-sub">The initial 4 months — four books that shape the foundation.</p>
+  <span class="gold-rule wide"></span>
+
+  <div class="budding-books">
+    <div class="budding-book">
+      <span class="budding-num">01</span>
+      <div>
+        <p class="budding-title">Western Civilization, Islam and Muslims</p>
+        <p class="budding-author">Maulana Abul Hasan Ali Nadwi</p>
+      </div>
+    </div>
+    <div class="budding-book">
+      <span class="budding-num">02</span>
+      <div>
+        <p class="budding-title">Islam and Western Society</p>
+        <p class="budding-author">Maryam Jameelah</p>
+      </div>
+    </div>
+    <div class="budding-book">
+      <span class="budding-num">03</span>
+      <div>
+        <p class="budding-title">The Modernist Menace to Islam</p>
+        <p class="budding-author">Daniel Haqiqatjou</p>
+      </div>
+    </div>
+    <div class="budding-book">
+      <span class="budding-num">04</span>
+      <div>
+        <p class="budding-title">Road to Mecca</p>
+        <p class="budding-author">Muhammad Asad</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top: 3rem;">
+    <a href="#" onclick="handleJoinAccess(); return false;" class="btn-primary">Join the Circle →</a>
   </div>
 </section>
 
