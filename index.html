@@ -88,7 +88,7 @@ nav.scrolled {
   text-decoration: none;
 }
 .nav-logo img {
-  width: 48px; height: 48px; object-fit: contain;
+  width: 48px; height: 48px; object-fit: cover; border-radius: 50%;
   filter: drop-shadow(0 0 6px rgba(184,145,42,0.3));
   transition: transform 0.4s ease;
 }
@@ -177,7 +177,9 @@ nav.scrolled {
 .hero-logo {
   width: 160px; height: 160px; object-fit: contain;
   margin-bottom: 2rem;
-  filter: drop-shadow(0 4px 24px rgba(184,145,42,0.3));
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 8px rgba(184,145,42,0.1), 0 8px 40px rgba(184,145,42,0.25);
   animation: heroLogoIn 1.2s cubic-bezier(0.16,1,0.3,1) both;
 }
 @keyframes heroLogoIn {
@@ -420,7 +422,11 @@ nav.scrolled {
 }
 .about-logo {
   width: 140px; margin-bottom: 2rem;
-  filter: drop-shadow(0 4px 16px rgba(184,145,42,0.2));
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 0 6px rgba(184,145,42,0.07);
   animation: gentleSway 8s ease-in-out infinite;
 }
 @keyframes gentleSway {
@@ -590,7 +596,10 @@ footer {
 }
 .footer-logo {
   width: 70px; margin: 0 auto 1.5rem;
-  filter: brightness(0) invert(1) opacity(0.5);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(184,145,42,0.4);
+  display: block;
 }
 .footer-name {
   font-family: var(--font-display);
