@@ -1054,12 +1054,11 @@ function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
 </script>
+
 <script>
 function handleJoinAccess() {
-  const today = new Date();
-  const currentDate = today.getDate();
+  var currentDate = new Date().getDate();
 
-  // Open admissions from 24th to 31st
   if (currentDate >= 24) {
 
     window.open(
@@ -1069,17 +1068,45 @@ function handleJoinAccess() {
 
   } else {
 
-    alert(
-      "Admissions are currently closed. New members can apply from the 25th of every month onward. Please DM our Instagram page for further information."
-    );
+    document.getElementById("joinPopup").style.display = "flex";
 
-    window.open(
-      "https://www.instagram.com/project_waliullah_bookclub",
-      "_blank"
-    );
   }
 }
+
+function closePopup() {
+  document.getElementById("joinPopup").style.display = "none";
+}
+
+function goToInstagram() {
+  window.open("https://www.instagram.com/project_waliullah_bookclub", "_blank");
+  closePopup();
+}
 </script>
+
+<div id="joinPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;"
+onclick="closePopup()">
+
+  <div onclick="event.stopPropagation()"
+    style="background:#faf8f4; padding:25px; max-width:400px; width:85%; border-radius:12px; text-align:center; font-family:serif;">
+
+    <p style="margin-bottom:20px; font-size:1rem; color:#3d3020;">
+     Admissions are temporarily closed at the moment. New membership applications are accepted from the 24th of every month onward. For late entry consideration, please feel free to DM our page to discuss further.
+    </p>
+
+    <button onclick="goToInstagram()" 
+      style="padding:10px 15px; margin-right:10px; background:#b8912a; color:white; border:none; cursor:pointer;">
+      Go to the Instagram Page
+    </button>
+
+    <button onclick="closePopup()" 
+      style="padding:10px 15px; background:#ccc; border:none; cursor:pointer;">
+      Back
+    </button>
+
+  </div>
+
+</div>
 
 </body>
 </html>
