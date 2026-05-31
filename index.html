@@ -1058,18 +1058,18 @@ function toggleMenu() {
 <script>
 function handleJoinAccess() {
   var currentDate = new Date().getDate();
+  var currentMonth = new Date().getMonth();
+  var currentDay = new Date().getDate();
 
-  if (currentDate >= 24) {
-
+  // Normal form: 24th of current month to 5th of next month
+  // Late reg: 6th to 23rd
+  if (currentDay >= 24 || currentDay <= 5) {
     window.open(
       "https://docs.google.com/forms/d/e/1FAIpQLSeAdtxu3MxlNepiAs7anWKH5UcDoqtVXuV2GtAooOvmDFGEvA/viewform",
       "_blank"
     );
-
   } else {
-
     document.getElementById("joinPopup").style.display = "flex";
-
   }
 }
 
@@ -1082,6 +1082,7 @@ function goToLateReg() {
   closePopup();
 }
 </script>
+
 
 <div id="joinPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
 background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;"
